@@ -716,12 +716,12 @@ else
 UserInfousername = '['..UserInfo.first_name..'](tg://user?id='..UserId..')'
 end
 return {
-Lock     = '[- M a R V e L 🦇.](https://t.me/II_T9)\n*━─━─━─━─━─━─━\n⌔︰بواسطه ˓ *'..UserInfousername..'\n*'..TextMsg..'\n⌔︰خاصيه المسح *',
-unLock   = '[- M a R V e L 🦇.](https://t.me/II_T9)\n*━─━─━─━─━─━─━\n⌔︰بواسطه ˓ *'..UserInfousername..'\n'..TextMsg,
-lockKtm  = '[- M a R V e L 🦇.](https://t.me/II_T9)\n*━─━─━─━─━─━─━\n⌔︰بواسطه ˓ *'..UserInfousername..'\n*'..TextMsg..'\n⌔︰خاصيه الكتم *',
-lockKid  = '[- M a R V e L 🦇.](https://t.me/II_T9)\n*━─━─━─━─━─━─━\n⌔︰بواسطه ˓ *'..UserInfousername..'\n*'..TextMsg..'\n⌔︰خاصيه التقييد *',
-lockKick = '[- M a R V e L 🦇.](https://t.me/II_T9)\n*━─━─━─━─━─━─━\n⌔︰بواسطه ˓ *'..UserInfousername..'\n*'..TextMsg..'\n⌔︰خاصيه الطرد *',
-Reply    = '[- M a R V e L 🦇.](https://t.me/II_T9)\n*━─━─━─━─━─━─━\n⌔︰المستخدم ˓ *'..UserInfousername..'\n*'..TextMsg..'*'
+Lock     = '[- L u c i f e r 🦇.](https://t.me/II_T9)\n*━─━─━─━─━─━─━\n⌔︰بواسطه ˓ *'..UserInfousername..'\n*'..TextMsg..'\n⌔︰خاصيه المسح *',
+unLock   = '[- L u c i f e r 🦇.](https://t.me/II_T9)\n*━─━─━─━─━─━─━\n⌔︰بواسطه ˓ *'..UserInfousername..'\n'..TextMsg,
+lockKtm  = '[- L u c i f e r 🦇.](https://t.me/II_T9)\n*━─━─━─━─━─━─━\n⌔︰بواسطه ˓ *'..UserInfousername..'\n*'..TextMsg..'\n⌔︰خاصيه الكتم *',
+lockKid  = '[- L u c i f e r 🦇.](https://t.me/II_T9)\n*━─━─━─━─━─━─━\n⌔︰بواسطه ˓ *'..UserInfousername..'\n*'..TextMsg..'\n⌔︰خاصيه التقييد *',
+lockKick = '[- L u c i f e r 🦇.](https://t.me/II_T9II_T9)\n*━─━─━─━─━─━─━\n⌔︰بواسطه ˓ *'..UserInfousername..'\n*'..TextMsg..'\n⌔︰خاصيه الطرد *',
+Reply    = '[- L u c i f e r 🦇.](https://t.me/II_T9)\n*━─━─━─━─━─━─━\n⌔︰المستخدم ˓ *'..UserInfousername..'\n*'..TextMsg..'*'
 }
 end
 function StatusCanOrNotCan(ChatId,UserId)
@@ -1181,7 +1181,7 @@ elseif Videonote_Group == "kick" then
 LuaTele.setChatMemberStatus(msg.chat_id,msg.sender.user_id,'banned',0)
 end
 print('This is video Note')
-end
+end 
 
 if msg.content.luatele == "messageDocument" and not msg.Distinguished then  -- الملفات
 local Document_Group = Redis:get(TheMaRVeL.."MaRVeL:Lock:Document"..msg_chat_id)
@@ -1575,7 +1575,7 @@ data = {
 {text = '- الغاء الامر', data = msg.sender.user_id..'/delamrredis'},
 },
 {
-{text = '- M a R V e L 🦇. ⁦', url='https://t.me/II_T9'},
+{text = '- L u c i f e r 🦇. ⁦', url='https://t.me/II_T9'},
 },
 }
 }
@@ -1772,7 +1772,7 @@ data = {
 {text = '- الغاء الامر', data = msg.sender.user_id..'/delamrredis'},
 },
 {
-{text = '- M a R V e L 🦇. ⁦', url='https://t.me/II_T9'},
+{text = '- L u c i f e r 🦇. ⁦', url='https://t.me/II_T9'},
 },
 }
 }
@@ -2046,7 +2046,7 @@ data = {
 {text = '- الغاء الامر', data = msg.sender.user_id..'/delamrredis'},
 },
 {
-{text = '- M a R V e L 🦇. ⁦', url='https://t.me/II_T9'},
+{text = '- L u c i f e r 🦇. ⁦', url='https://t.me/II_T9'},
 },
 }
 }
@@ -2643,7 +2643,7 @@ data = {
 {text = '٬ 𝖺𝖼𝗍𝗂𝗏𝖺𝗍𝗂𝗇𝗀 𝗁𝖺𝗇𝖽𝗌 † ٫', data = msg.sender.user_id..'/'.. 'mute_IdPhoto'},
 },
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'},
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'},
 },
 }
 }
@@ -2726,7 +2726,7 @@ data = {
 {text = '٬ 𝖺𝖼𝗍𝗂𝗏𝖺𝗍𝗂𝗇𝗀 𝗁𝖺𝗇𝖽𝗌 † ٫', data = msg.sender.user_id..'/'.. 'mute_IdPhoto'},
 },
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'},
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'},
 },
 }
 }
@@ -4535,7 +4535,7 @@ data = {
 {text = '- الغاء الامر', data = msg.sender.user_id..'/delamrredis'},
 },
 {
-{text = '- M a R V e L 🦇.', url='https://t.me/II_T9'},
+{text = '- L u c i f e r 🦇.', url='https://t.me/II_T9'},
 },
 }
 }
@@ -5058,7 +5058,7 @@ if not msg.DevelopersQ then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⌔︰ هاذا الامر يخص 『 '..Controller_Num(2)..' 』* ',"md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '٬ 𝖼𝗅𝗂𝖼𝗄 𝗍𝗈 𝗌𝗎𝖻𝗌𝖼𝗋𝗂𝖻𝖾 † ٫ ', url = 't.me/II_T2'}, },}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '٬ 𝖼𝗅𝗂𝖼𝗄 𝗍𝗈 𝗌𝗎𝖻𝗌𝖼𝗋𝗂𝖻𝖾 † ٫ ', url = 't.me/II_T9'}, },}}
 return LuaTele.sendText(msg.chat_id,msg.id,'*\n⌔︰ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local UserId_Info = LuaTele.searchPublicChat(UserName)
@@ -5099,7 +5099,7 @@ if not msg.DevelopersQ then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⌔︰ هاذا الامر يخص 『 '..Controller_Num(2)..' 』* ',"md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '٬ 𝖼𝗅𝗂𝖼𝗄 𝗍𝗈 𝗌𝗎𝖻𝗌𝖼𝗋𝗂𝖻𝖾 † ٫ ', url = 't.me/II_T2'}, },}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '٬ 𝖼𝗅𝗂𝖼𝗄 𝗍𝗈 𝗌𝗎𝖻𝗌𝖼𝗋𝗂𝖻𝖾 † ٫ ', url = 't.me/II_T9'}, },}}
 return LuaTele.sendText(msg.chat_id,msg.id,'*\n⌔︰ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local UserId_Info = LuaTele.searchPublicChat(UserName)
@@ -5573,7 +5573,7 @@ if not msg.DevelopersQ then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⌔︰ هاذا الامر يخص 『 '..Controller_Num(2)..' 』* ',"md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '٬ 𝖼𝗅𝗂𝖼𝗄 𝗍𝗈 𝗌𝗎𝖻𝗌𝖼𝗋𝗂𝖻𝖾 † ٫ ', url = 't.me/II_T2'}, },}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '٬ 𝖼𝗅𝗂𝖼𝗄 𝗍𝗈 𝗌𝗎𝖻𝗌𝖼𝗋𝗂𝖻𝖾 † ٫ ', url = 't.me/II_T9'}, },}}
 return LuaTele.sendText(msg.chat_id,msg.id,'*\n⌔︰ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local Message_Reply = LuaTele.getMessage(msg.chat_id, msg.reply_to_message_id)
@@ -5611,7 +5611,7 @@ if not msg.DevelopersQ then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⌔︰ هاذا الامر يخص 『 '..Controller_Num(2)..' 』* ',"md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '٬ 𝖼𝗅𝗂𝖼𝗄 𝗍𝗈 𝗌𝗎𝖻𝗌𝖼𝗋𝗂𝖻𝖾 † ٫ ', url = 't.me/II_T2'}, },}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '٬ 𝖼𝗅𝗂𝖼𝗄 𝗍𝗈 𝗌𝗎𝖻𝗌𝖼𝗋𝗂𝖻𝖾 † ٫ ', url = 't.me/II_T9'}, },}}
 return LuaTele.sendText(msg.chat_id,msg.id,'*\n⌔︰ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local Message_Reply = LuaTele.getMessage(msg.chat_id, msg.reply_to_message_id)
@@ -6259,7 +6259,7 @@ local TestText = "  ❲ Owner Groups ❳\n━─━─━─━─━─━─�
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '- M a R V e L 🦇.', url = "https://t.me/II_T9"}
+{text = '- L u c i f e r 🦇.', url = "https://t.me/II_T9"}
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -6665,7 +6665,7 @@ keyboard.inline_keyboard = {
 {text = '𝖺𝗀𝖺𝗂𝗇 💸 - ', callback_data = IdUser..'/Re@'},
 },
 {
-{text = '- M a R V e L 🦇.',url="t.me/II_T9"}
+{text = '- L u c i f e r 🦇.',url="t.me/II_T9"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -6676,16 +6676,17 @@ Abs = math.random(2,140);
 local Text ='*⌔︰تم اختيار متحركه لك*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '- M a R V e L 🦇.',url="t.me/II_T9"}},
+{{text = '- L u c i f e r 🦇.',url="t.me/II_T9"}},
 }
 local msg_id = msg.id/2097152/0.5
-https.request("https://api.telegram.org/bot"..Token..'/sendanimation?chat_id=' .. msg.chat_id .. '&animation=https://t.me/GifDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=end
+https.request("https://api.telegram.org/bot"..Token..'/sendanimation?chat_id=' .. msg.chat_id .. '&animation=https://t.me/GifDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
 if text == "شعر" then
 Abs = math.random(2,140); 
 local Text ='*⌔︰تم اختيار الشعر لك فقط*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '- M a R V e L 🦇.',url="t.me/II_T9"}},
+{{text = '- L u c i f e r 🦇.',url="t.me/II_T9"}},
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/L1BBBL/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -6695,7 +6696,7 @@ Abs = math.random(2,140);
 local Text ='*⌔︰تم اختيار الميمز لك فقط*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '- M a R V e L 🦇.',url="t.me/II_T2"}},
+{{text = '- L u c i f e r 🦇.',url="t.me/II_T9"}},
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/remixsource/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -6706,7 +6707,7 @@ local Text ='*⌔︰تم اختيار ريمكس لك*'
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '- M a R V e L 🦇.', url = "https://t.me/II_T9"}
+{text = '- L u c i f e r 🦇.', url = "https://t.me/II_T9"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -6718,7 +6719,7 @@ local Text ='*⌔︰تم اختيار الفلم لك*'
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '- M a R V e L 🦇.', url = "https://t.me/II_T2"}
+{text = '- L u c i f e r 🦇.', url = "https://t.me/II_T9"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -6730,7 +6731,7 @@ local Text ='*⌔︰تم اختيار انمي لك*'
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '- M a R V e L 🦇.', url = "https://t.me/II_T9"}
+{text = '- L u c i f e r 🦇.', url = "https://t.me/II_T9"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -6741,7 +6742,7 @@ Abs = math.random(2,140);
 local Text ='*⌔︰تم اختيار الاغنيه لك*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '- M a R V e L 🦇.',url="t.me/II_T9"}},
+{{text = '- L u c i f e r 🦇.- L u c i f e r 🦇.',url="t.me/II_T9"}},
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/lDIDIl/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -6752,7 +6753,7 @@ local Text ='*⌔︰تم اختيار صور*'
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '- M a R V e L 🦇.', url = "https://t.me/II_T9"}
+{text = '- L u c i f e r 🦇.', url = "https://t.me/II_T9"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -8432,7 +8433,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -9789,7 +9790,7 @@ local TestText = "  ❲ MaRVeL 𝖲𝗈𝗎𝗋𝖼𝖾 ❳\n━─━─━─�
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '- M a R V e L 🦇.', url = "https://t.me/II_T9"}
+{text = '- L u c i f e r 🦇.', url = "https://t.me/II_T9"}
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -9802,7 +9803,7 @@ keyboardd.inline_keyboard = {
 {text = '❲ 𝖼𝗈𝖽𝖾𝗋 ❳', url = "https://t.me/Too_9"}
 },
 {
-{text = '- M a R V e L 🦇.', url = "https://t.me/II_T9"},
+{text = '- L u c i f e r 🦇.', url = "https://t.me/II_T9"},
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -9824,7 +9825,7 @@ local TestText = "  ❲ Developers Bot ❳\n━─━─━─━─━─━─
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '- M a R V e L 🦇.', url = "https://t.me/II_T9"}
+{text = '- L u c i f e r 🦇.', url = "https://t.me/II_T9"}
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -9895,7 +9896,7 @@ data = {
 {text = 'Facebook', url = 'https://www.facebook.com/help/deleteaccount'},{text = 'Snapchat', url = 'https://accounts.snapchat.com/accounts/login?continue=https%3A%2F%2Faccounts.snapchat.com%2Faccounts%2Fdeleteaccount'}
 },
 {
-{text = '˛ - M a R V e L 🦇. .', url = 't.me/II_T9'}, 
+{text = '˛ - L u c i f e r 🦇. .', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -9909,9 +9910,9 @@ local rep = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id="..msg_chat_id.."&caption="..URL.escape(t).."&photo="..m.."&reply_to_message_id="..rep.."&parse_mode=Markdown")
 end
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
-video = "https://t.me/II_T0/440"
+video = "https://t.me/II_T0/459"
 local T =[[
-Welcome to Source : [- M a R V e L 🦇.](https://t.me/II_T9)
+Welcome to Source : [- L u c i f e r 🦇.](https://t.me/II_T9)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -9922,7 +9923,7 @@ keyboard.inline_keyboard = {
 {text = 'ُ𝗍𝗐𝗌 †', url = "https://t.me/II_T1BOT"}
 },
 {
-{text = '- M a R V e L 🦇.', url = "https://t.me/Link_TrunD"}
+{text = '- L u c i f e r 🦇.', url = "https://t.me/II_T0"}
 },
 }
 local msgg = msg_id/2097152/0.5
@@ -9952,7 +9953,7 @@ data = {
 {text = '𝖽𝗂𝗌𝗋𝗎𝗉𝗍𝗂𝗈𝗇 𝗈𝗋𝖽𝖾𝗋𝗌', data = msg.sender.user_id..'/NoNextSeting'}, {text = '𝗅𝗈𝖼𝗄 𝗈𝗋𝖽𝖾𝗋𝗌  ', data = msg.sender.user_id..'/listallAddorrem'}, 
 },
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -9974,7 +9975,7 @@ data = {
 {text = '• 𝗈𝗋𝖽𝖾𝗋 𝗅𝗂𝗌𝗍 •', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T2'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -9994,7 +9995,7 @@ data = {
 {text = '• 𝗈𝗋𝖽𝖾𝗋 𝗅𝗂𝗌𝗍 •', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -10014,7 +10015,7 @@ data = {
 {text = '• 𝗈𝗋𝖽𝖾𝗋 𝗅𝗂𝗌𝗍 •', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -10034,7 +10035,7 @@ data = {
 {text = '• 𝗈𝗋𝖽𝖾𝗋 𝗅𝗂𝗌𝗍 •', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -10054,7 +10055,7 @@ data = {
 {text = '• 𝗈𝗋𝖽𝖾𝗋 𝗅𝗂𝗌𝗍 •', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -10068,7 +10069,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -10082,7 +10083,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -10097,7 +10098,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -10112,7 +10113,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -10127,7 +10128,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -10142,7 +10143,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -10157,7 +10158,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -10172,7 +10173,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -10187,7 +10188,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -10201,7 +10202,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -10216,7 +10217,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T2'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -10231,7 +10232,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -10246,7 +10247,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -10261,7 +10262,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -10277,7 +10278,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -10291,7 +10292,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -10306,7 +10307,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -12167,7 +12168,7 @@ keyboard.inline_keyboard = {
 {text = '𝖺𝗀𝖺𝗂𝗇 💸 - ', callback_data = IdUser..'/Re@'},
 },
 {
-{text = '- M a R V e L 🦇.',url="t.me/II_T9"}
+{text = '- L u c i f e r 🦇.',url="t.me/II_T9"}
 },
 }
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. ChatId .. '&voice=https://t.me/TEAMSUL/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12445,7 +12446,7 @@ data = {
 {text = '𝗆𝖺𝗂𝗇 𝗅𝗂𝗌𝗍 ⛓️. ', data = IdUser..'/helpall'},
 },
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -12503,7 +12504,7 @@ data = {
 {text = '𝗆𝖺𝗂𝗇 𝗅𝗂𝗌𝗍 ⛓️. ', data = IdUser..'/helpall'},
 },
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -12562,7 +12563,7 @@ data = {
 {text = '𝗆𝖺𝗂𝗇 𝗅𝗂𝗌𝗍 ⛓️. ', data = IdUser..'/helpall'},
 },
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -12615,7 +12616,7 @@ data = {
 {text = '𝗆𝖺𝗂𝗇 𝗅𝗂𝗌𝗍 ⛓️. ', data = IdUser..'/helpall'},
 },
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -12655,7 +12656,7 @@ data = {
 {text = '𝗆𝖺𝗂𝗇 𝗅𝗂𝗌𝗍 ⛓️. ', data = IdUser..'/helpall'},
 },
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -12710,7 +12711,7 @@ data = {
 {text = '𝗆𝖺𝗂𝗇 𝗅𝗂𝗌𝗍 ⛓️. ', data = IdUser..'/helpall'},
 },
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
@@ -12761,7 +12762,7 @@ data = {
 {text = '𝗆𝖺𝗂𝗇 𝗅𝗂𝗌𝗍 ⛓️. ', data = IdUser..'/helpall'},
 },
 {
-{text = '- M a R V e L 🦇.', url = 't.me/II_T9'}, 
+{text = '- L u c i f e r 🦇.', url = 't.me/II_T9'}, 
 },
 }
 }
