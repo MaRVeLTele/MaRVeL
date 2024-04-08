@@ -6662,7 +6662,7 @@ local Text ='*↯︙تم اختيار الاغنيه لك*'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'ɴᴇxᴛ ', callback_data = IdUser..'/Re@'},
+{text = 'agin ', callback_data = IdUser..'/Re@'},
 },
 {
 {text = '𝘛 ꩟ - 𝘛𝘙𝘌𝘕𝘋',url="t.me/unuiu"}
@@ -7536,7 +7536,7 @@ if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*↯︙هاذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '٬ 𝖼𝗅𝗂𝖼𝗄 𝗍𝗈 𝗌𝗎𝖻𝗌𝖼𝗋𝗂𝖻𝖾 † ٫ ', url = 't.me/'..Redis:get(TheMaRVeL..'MaRVeL:Channel:Join')}, },}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '٬ 𝖼??𝗂𝖼𝗄 𝗍𝗈 𝗌𝗎𝖻𝗌𝖼𝗋𝗂𝖻𝖾 † ٫ ', url = 't.me/'..Redis:get(TheMaRVeL..'MaRVeL:Channel:Join')}, },}}
 return LuaTele.sendText(msg.chat_id,msg.id,'*\n 𝗐𝖾𝗅𝖼𝗈𝗆𝖾 𝗉𝗋𝗈 🦎.*',"md",false, false, false, false, reply_markup)
 end
 Redis:set(TheMaRVeL.."MaRVeL:Lock:forward"..msg_chat_id,"del")  
@@ -9918,10 +9918,10 @@ local T =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '❲ ᴅᴇᴠʟᴏᴘᴇʀ ❳', url = "https://t.me/Too_9"},{text = '❲ ᴜᴘᴅᴀᴛꜱ ᴛᴍ ❳', url = "https://t.me/ucuiu"}
+{text = '⦗ ᴅᴇᴠʟᴏᴘᴇʀ ⦘', url = "https://t.me/Too_9"},{text = '⦗ ᴜᴘᴅᴀᴛꜱ ᴛᴍ ⦘', url = "https://t.me/ucuiu"}
 },
 {
-{text = 'ُ❲ ꜱᴜᴘᴘᴏʀᴛ ❳', url = "https://t.me/Too_9BOT"}
+{text = 'ُ⦗ ꜱᴜᴘᴘᴏʀᴛ ⦘', url = "https://t.me/Too_9BOT"}
 },
 {
 {text = '𝘛 ꩟ - 𝘛𝘙𝘌𝘕𝘋', url = "https://t.me/ucuiu"}
