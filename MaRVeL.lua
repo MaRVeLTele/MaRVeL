@@ -2975,6 +2975,11 @@ local List = {
 ◟𝖬ْ!𝖦 #msgs   .٠
 ◟𝖲ْ!𝖳 #stast 📍.  
 ◟𝖨ْ!𝖽 #id  📍 .٠
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '❲ ᴅᴇᴠʟᴏᴘᴇʀ ❳', url = "https://t.me/Too_9"},
+},
 ]],
 [[
 ˛ 𝗎!𝗌 : #username ٰ⛓️ '.
@@ -6662,7 +6667,7 @@ local Text ='*↯︙تم اختيار الاغنيه لك*'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '𝖺𝗀𝖺𝗂𝗇 💸 - ', callback_data = IdUser..'/Re@'},
+{text = 'ɴᴇxᴛ ', callback_data = IdUser..'/Re@'},
 },
 {
 {text = '𝘛 ꩟ - 𝘛𝘙𝘌𝘕𝘋',url="t.me/unuiu"}
@@ -6742,7 +6747,7 @@ Abs = math.random(2,140);
 local Text ='*↯︙تم اختيار الاغنيه لك*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝘛 ꩟ - 𝘛𝘙𝘌𝘕𝘋𝘛 ꩟ - 𝘛𝘙𝘌𝘕𝘋',url="t.me/unuiu"}},
+{{text = '𝘛 ꩟ - 𝘛𝘙𝘌𝘕𝘋',url="t.me/unuiu"}},
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/lDIDIl/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -9786,7 +9791,7 @@ Bio = ''
 end
 local photo = LuaTele.getUserProfilePhotos(UserId_Info.id)
 if photo.total_count > 0 then
-local TestText = "  ❲ MaRVeL 𝖲𝗈𝗎𝗋𝖼𝖾 ❳\n– – – – – –\n↯︙*Dev Name* :  ["..UserInfo.first_name.."](tg://user?id="..UserId_Info.id..")\n↯︙*Dev Bio* : [❲ "..Bio.." ❳]"
+local TestText = "  ❲ TrEnD 𝖲𝗈𝗎𝗋𝖼𝖾 ❳\n– – – – – –\n↯︙*Dev Name* :  ["..UserInfo.first_name.."](tg://user?id="..UserId_Info.id..")\n↯︙*Dev Bio* : [❲ "..Bio.." ❳]"
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
@@ -9910,17 +9915,18 @@ local rep = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id="..msg_chat_id.."&caption="..URL.escape(t).."&photo="..m.."&reply_to_message_id="..rep.."&parse_mode=Markdown")
 end
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
-video = "https://t.me/Sorskjjj/2"
+video = "https://t.me/ssnis/7"
 local T =[[
-Welcome to Source : [𝘛 ꩟ - 𝘛𝘙𝘌𝘕𝘋](https://t.me/unuiu)
+↯︙Welcome to Team [𝘛 ꩟ - 𝘛𝘙𝘌𝘕𝘋](https://t.me/unuiu)
+↯︙Operator of this bot
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '𝗂𝗇𝗍𝖾𝗋𝗇𝖺𝗍𝗂𝗈𝗇𝖺𝗅 𝗉𝗋𝗈𝗀𝗋𝖺𝗆𝗆𝖾𝗋 †', url = "https://t.me/Too_9"},{text = '𝗌𝗈𝗎𝗋𝖼𝖾 †', url = "https://t.me/unuiu"}
+{text = '❲ ᴅᴇᴠʟᴏᴘᴇʀ ❳', url = "https://t.me/Too_9"},{text = '❲ ᴜᴘᴅᴀᴛꜱ ᴛᴍ ❳', url = "https://t.me/ucuiu"}
 },
 {
-{text = 'ُ𝗍𝗐𝗌 †', url = "https://t.me/Too_9BOT"}
+{text = 'ُ❲ ꜱᴜᴘᴘᴏʀᴛ ❳', url = "https://t.me/Too_9BOT"}
 },
 {
 {text = '𝘛 ꩟ - 𝘛𝘙𝘌𝘕𝘋', url = "https://t.me/ucuiu"}
@@ -12165,7 +12171,7 @@ local msg_id = Msg_id/2097152/0.5
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '𝖺𝗀𝖺𝗂𝗇 💸 - ', callback_data = IdUser..'/Re@'},
+{text = 'ɴᴇxᴛ ', callback_data = IdUser..'/Re@'},
 },
 {
 {text = '𝘛 ꩟ - 𝘛𝘙𝘌𝘕𝘋',url="t.me/unuiu"}
