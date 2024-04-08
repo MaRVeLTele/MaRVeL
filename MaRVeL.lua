@@ -2975,11 +2975,6 @@ local List = {
 ◟𝖬ْ!𝖦 #msgs   .٠
 ◟𝖲ْ!𝖳 #stast 📍.  
 ◟𝖨ْ!𝖽 #id  📍 .٠
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '❲ ᴅᴇᴠʟᴏᴘᴇʀ ❳', url = "https://t.me/Too_9"},
-},
 ]],
 [[
 ˛ 𝗎!𝗌 : #username ٰ⛓️ '.
