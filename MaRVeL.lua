@@ -6662,7 +6662,7 @@ local Text ='*↯︙تم اختيار الاغنيه لك*'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'agin ', callback_data = IdUser..'/Re@'},
+{text = 'ɴᴇxᴛ ', callback_data = IdUser..'/Re@'},
 },
 {
 {text = '𝘛 ꩟ - 𝘛𝘙𝘌𝘕𝘋',url="t.me/unuiu"}
@@ -9910,7 +9910,7 @@ local rep = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id="..msg_chat_id.."&caption="..URL.escape(t).."&photo="..m.."&reply_to_message_id="..rep.."&parse_mode=Markdown")
 end
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
-video = "https://t.me/ssnis/7"
+video = "https://t.me/ssnis/9"
 local T =[[
 ↯︙Welcome to Team [𝘛 ꩟ - 𝘛𝘙𝘌𝘕𝘋](https://t.me/unuiu)
 ↯︙Operator of this bot
@@ -9921,7 +9921,7 @@ keyboard.inline_keyboard = {
 {text = '⦗ ᴅᴇᴠʟᴏᴘᴇʀ ⦘', url = "https://t.me/Too_9"},{text = '⦗ ᴜᴘᴅᴀᴛꜱ ᴛᴍ ⦘', url = "https://t.me/ucuiu"}
 },
 {
-{text = 'ُ⦗ ꜱᴜᴘᴘᴏʀᴛ ⦘', url = "https://t.me/Too_9BOT"}
+{text = '⦗ ꜱᴜᴘᴘᴏʀᴛ ⦘', url = "https://t.me/Too_9BOT"}
 },
 {
 {text = '𝘛 ꩟ - 𝘛𝘙𝘌𝘕𝘋', url = "https://t.me/ucuiu"}
