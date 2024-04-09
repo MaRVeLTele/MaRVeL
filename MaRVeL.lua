@@ -2801,37 +2801,79 @@ end
 end
 if chat_type(msg.chat_id) == "GroupBot" and Redis:sismember(TheMaRVeL.."MaRVeL:ChekBotAdd",msg_chat_id) then
 Redis:incr(TheMaRVeL..'MaRVeL:Num:Message:User'..msg.chat_id..':'..msg.sender.user_id) 
-if text == "ايدي" and msg.reply_to_message_id == 0 then
-if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '٬ 𝖼𝗅𝗂𝖼𝗄 𝗍𝗈 𝗌𝗎𝖻𝗌𝖼𝗋𝗂𝖻𝖾 † ٫ ', url = 't.me/'..Redis:get(TheMaRVeL..'MaRVeL:Channel:Join')}, },}}
-return LuaTele.sendText(msg.chat_id,msg.id,'*\n 𝗐𝖾𝗅𝖼𝗈𝗆𝖾 𝗉𝗋𝗈 🦎.*',"md",false, false, false, false, reply_markup)
-end 
-if not Redis:get(TheMaRVeL.."MaRVeL:Status:Id"..msg_chat_id) then
-return false
-end
-local UserInfo = LuaTele.getUser(msg.sender.user_id)
-local photo = LuaTele.getUserProfilePhotos(msg.sender.user_id)
-local UserId = msg.sender.user_id
-local RinkBot = msg.Name_Controller
-local TotalMsg = Redis:get(TheMaRVeL..'MaRVeL:Num:Message:User'..msg_chat_id..':'..msg.sender.user_id) or 0
+if text == "ايدي" or text == "id" or text == 'Id' or text == 'ID' or text == 'ا' or text == 'لونلي' and msg.reply_to_message_id == 0 then
+
+local UserInfo = merolua.getUser(msg.sender_id.user_id)
+local InfoUser = merolua.getUserFullInfo(msg.sender_id.user_id)
+local Bio = FlterBio(getbio(msg.sender_id.user_id))
+if Redis:get(Thehlm.."NSFW:"..msg.chat_id) then
+if not msg.ControllerBot then
+if not msg.TheBasicsQ then 
+local photo = merolua.getUserProfilePhotos(msg.sender_id.user_id)
 local TotalPhoto = photo.total_count or 0
-local TotalEdit = Redis:get(TheMaRVeL..'MaRVeL:Num:Message:Edit'..msg_chat_id..msg.sender.user_id) or 0
+if photo.total_count > 0 then
+local thumb_id = photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id
+local api_ = request('http://161.35.201.62:8080/nsfw?token=' .. Token .. '&file_id='..thumb_id)
+local api = JSON.decode(api_)
+if api.result.is_nsfw == true then
+local ban = merolua.getUser(msg.sender_id.user_id)
+if ban.first_name then
+news = ban.first_name
+else
+news = " لا يوجد اسم"
+end
+if msg.can_be_deleted_for_all_users == false then
+return send(msg_chat_id,msg_id,"\n⇜ عذراً البوت ليس مشرف في القروب يرجى رفعه واعطائه الصلاحيات ","md",true)  
+end
+if GetInfoBot(msg).BanUser == false then
+return send(msg_chat_id,msg_id,'\n⇜ البوت ليس لديه صلاحيه حظر المستخدمين ',"md",true)
+end
+merolua.setChatMemberStatus(msg.chat_id,msg.sender_id.user_id,'restricted',{1,0,0,0,0,0,0,0,0})
+return send(msg_chat_id, msg_id , "「 "..news.." 」\n⇜ قام بارسال ايدي يحتوي على صورة اباحية\n⇜ تم تقييده ومسح رسالته\n✧")
+end
+end
+end
+end
+end
+-----------
+local StatusMember = merolua.getChatMember(msg_chat_id,msg.sender_id.user_id)
+if StatusMember.status.custom_title ~= "" then
+Lakb = StatusMember.status.custom_title
+else
+Lakb = 'مشرف'
+end
+if (StatusMember.status.luatele == "chatMemberStatusCreator") then
+Lakb = 'مالك القروب' 
+elseif (StatusMember.status.luatele == "chatMemberStatusAdministrator") then
+Lakb = 'مشرف'  
+else
+Lakb = 'عضو'
+end
+-----------
+local nameuser = FlterBio(UserInfo.first_name)
+local photo = merolua.getUserProfilePhotos(msg.sender_id.user_id)
+local UserId = msg.sender_id.user_id
+local RinkBot = msg.Name_Controller
+local TotalMsg = Redis:get(Thehlm..'hlm:Num:Message:User'..msg_chat_id..':'..msg.sender_id.user_id) or 0
+local TotalPhoto = photo.total_count or 0
+local TotalEdit = Redis:get(Thehlm..'hlm:Num:Message:Edit'..msg_chat_id..msg.sender_id.user_id) or 0
 local TotalMsgT = Total_message(TotalMsg) 
-local NumberGames = Redis:get(TheMaRVeL.."MaRVeL:Num:Add:Games"..msg.chat_id..msg.sender.user_id) or 0
-local NumAdd = Redis:get(TheMaRVeL.."MaRVeL:Num:Add:Memp"..msg.chat_id..":"..msg.sender.user_id) or 0
-local Texting = {'ملاك وناسيك بكروبنه??',"حلغوم والله☹️ ","اطلق صوره🐼❤️","كيكك والله🥺","لازك بيها غيرها عاد😒",}
+local NumberGames = Redis:get(Thehlm.."hlm:Num:Add:Games"..msg.chat_id..msg.sender_id.user_id) or 0
+local NumAdd = Redis:get(Thehlm.."hlm:Num:Add:Memp"..msg.chat_id..":"..msg.sender_id.user_id) or 0
+local Texting = {'ملاك وناسيك بكروبنه😟',"حلغوم والله☹️ ","اطلق صوره🐼❤️","كيكك والله🥺","لازك بيها غيرها عاد😒",}
 local Description = Texting[math.random(#Texting)]
 if UserInfo.username then
 UserInfousername = '@'..UserInfo.username..''
 else
-UserInfousername = 'لا يوجد'
+UserInfousername = 'لا يوجد يوزر'
 end
-Get_Is_Id = Redis:get(TheMaRVeL.."MaRVeL:Set:Id:Group"..msg_chat_id)
-if Redis:get(TheMaRVeL.."MaRVeL:Status:IdPhoto"..msg_chat_id) then
+Get_Is_Id = Redis:get(Thehlm.."hlm:Set:Id:Groups") or Redis:get(Thehlm.."hlm:Set:Id:Group"..msg_chat_id)
+if Redis:get(Thehlm.."hlm:Status:IdPhoto"..msg_chat_id) then
 if Get_Is_Id then
 local Get_Is_Id = Get_Is_Id:gsub('#AddMem',NumAdd) 
-local Get_Is_Id = Get_Is_Id:gsub('#id',msg.sender.user_id) 
-local Get_Is_Id = Get_Is_Id:gsub('#username',UserInfousername) 
+local Get_Is_Id = Get_Is_Id:gsub('#id',msg.sender_id.user_id) 
+local Get_Is_Id = Get_Is_Id:gsub('#username',UserInfousername)
+local Get_Is_Id = Get_Is_Id:gsub('#name',UserInfo.first_name) 
 local Get_Is_Id = Get_Is_Id:gsub('#msgs',TotalMsg) 
 local Get_Is_Id = Get_Is_Id:gsub('#edit',TotalEdit) 
 local Get_Is_Id = Get_Is_Id:gsub('#stast',RinkBot) 
@@ -2839,39 +2881,110 @@ local Get_Is_Id = Get_Is_Id:gsub('#auto',TotalMsgT)
 local Get_Is_Id = Get_Is_Id:gsub('#Description',Description) 
 local Get_Is_Id = Get_Is_Id:gsub('#game',NumberGames) 
 local Get_Is_Id = Get_Is_Id:gsub('#photos',TotalPhoto) 
-if photo.total_count > 0 then
-return LuaTele.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id,Get_Is_Id)
+local Get_Is_Id = Get_Is_Id:gsub('#Bio',Bio)if photo.total_count > 0 then
+if photo.photos[1].animation then
+local File = request("https://api.telegram.org/bot" .. Token .. "/getfile?file_id="..photo.photos[1].animation.file.remote.id) 
+local fc = JSON.decode(File)
+local Name_File = download("https://api.telegram.org/file/bot"..Token.."/"..JSON.decode(File).result.file_path, "./id.mp4") 
+local reply_markup = merolua.replyMarkup{
+type = 'inline',
+data = {
+{
+{text= UserInfo.first_name ,url = "https://t.me/"..UserInfo.username..""},
+},
+}
+}
+return merolua.sendAnimation(msg.chat_id, msg.id, Name_File,Get_Is_Id,"md", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup)
 else
-return LuaTele.sendText(msg_chat_id,msg_id,Get_Is_Id,"md",true) 
+local reply_markup = merolua.replyMarkup{
+type = 'inline',
+data = {
+{
+{text= UserInfo.first_name ,url = "https://t.me/"..UserInfo.username..""},
+},
+}
+}
+return merolua.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id,Get_Is_Id,"md", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup)
+end
+else
+local reply_markup = merolua.replyMarkup{
+type = 'inline',
+data = {
+{
+{text= UserInfo.first_name ,url = "https://t.me/"..UserInfo.username..""},
+},
+}
+}
+return merolua.sendText(msg_chat_id,msg_id,Get_Is_Id,"md",false, false, false, false, reply_markup)
 end
 else
 if photo.total_count > 0 then
-return LuaTele.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id,
-'\n*↯︙'..Description..
-'\n↯︙ايديك : '..UserId..
-'\n↯︙معرفك : '..UserInfousername..
-'\n↯‍︰رتبتك : '..RinkBot..
-'\n↯︙صورك : '..TotalPhoto..
-'\n↯︙رسائلك : '..TotalMsg..
-'\n↯︙تعديلاتك : '..TotalEdit..
-'\n↯︙تفاعلك : '..TotalMsgT..
-'*', "md")
+if photo.photos[1].animation then
+local File = request("https://api.telegram.org/bot" .. Token .. "/getfile?file_id="..photo.photos[1].animation.file.remote.id) 
+local fc = JSON.decode(File)
+local Name_File = download("https://api.telegram.org/file/bot"..Token.."/"..JSON.decode(File).result.file_path, "./id.mp4") 
+local reply_markup = merolua.replyMarkup{
+type = 'inline',
+data = {
+{
+{text= UserInfo.first_name ,url = "https://t.me/"..UserInfo.username..""},
+},
+}
+}
+return merolua.sendAnimation(msg.chat_id, msg.id, Name_File,
+'\n*↯︙ايديك : ❨'..UserId..
+'❩\n↯︙معرفك : ❨*['..UserInfousername..
+']*❩\n↯‍︙رتبتك : ❨'..RinkBot..
+'❩\n↯︙رسائلك : ❨'..TotalMsg..
+'❩\n↯︙سحكاتك : ❨'..TotalEdit..
+'❩\n↯︙تفاعلك : ❨'..TotalMsgT..
+'❩\n↯︙البايو : ❨*['..Bio..
+']', "md", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup)
 else
-return LuaTele.sendText(msg_chat_id,msg_id,
-'\n*↯︙ايديك : '..UserId..
-'\n↯︙معرفك : '..UserInfousername..
-'\n↯‍︰رتبتك : '..RinkBot..
-'\n↯︙رسائلك : '..TotalMsg..
-'\n↯︙تعديلاتك : '..TotalEdit..
-'\n↯︙تفاعلك : '..TotalMsgT..
-'*',"md",true) 
+local reply_markup = merolua.replyMarkup{
+type = 'inline',
+data = {
+{
+{text= UserInfo.first_name ,url = "tg://user?id="..UserInfo.id..""},
+},
+}
+}
+return merolua.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id,
+'\n*↯︙ايديك : ❨'..UserId..
+'❩\n↯︙معرفك : ❨*['..UserInfousername..
+']*❩\n↯‍︙رتبتك : ❨'..RinkBot..
+'❩\n↯︙رسائلك : ❨'..TotalMsg..
+'❩\n↯︙سحكاتك : ❨'..TotalEdit..
+'❩\n↯︙تفاعلك : ❨'..TotalMsgT..
+'❩\n↯︙البايو : ❨*['..Bio..
+']', "md", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup)
+end
+else
+local reply_markup = merolua.replyMarkup{
+type = 'inline',
+data = {
+{
+{text= UserInfo.first_name ,url = "tg://user?id="..UserInfo.id..""},
+},
+}
+}
+return merolua.sendText(msg.chat_id, msg.id,
+'\n*↯︙ايديك : ❨'..UserId..
+'❩\n↯︙معرفك : ❨*['..UserInfousername..
+']*❩\n↯‍︙رتبتك : ❨'..RinkBot..
+'❩\n↯︙رسائلك : ❨'..TotalMsg..
+'❩\n↯︙سحكاتك : ❨'..TotalEdit..
+'❩\n↯︙تفاعلك : ❨'..TotalMsgT..
+'❩\n↯︙البايو : ❨*['..Bio..
+']', "md",false, false, false, false, reply_markup)
 end
 end
 else
 if Get_Is_Id then
 local Get_Is_Id = Get_Is_Id:gsub('#AddMem',NumAdd) 
-local Get_Is_Id = Get_Is_Id:gsub('#id',msg.sender.user_id) 
+local Get_Is_Id = Get_Is_Id:gsub('#id',msg.sender_id.user_id) 
 local Get_Is_Id = Get_Is_Id:gsub('#username',UserInfousername) 
+local Get_Is_Id = Get_Is_Id:gsub('#name',UserInfo.first_name) 
 local Get_Is_Id = Get_Is_Id:gsub('#msgs',TotalMsg) 
 local Get_Is_Id = Get_Is_Id:gsub('#edit',TotalEdit) 
 local Get_Is_Id = Get_Is_Id:gsub('#stast',RinkBot) 
@@ -2879,26 +2992,52 @@ local Get_Is_Id = Get_Is_Id:gsub('#auto',TotalMsgT)
 local Get_Is_Id = Get_Is_Id:gsub('#Description',Description) 
 local Get_Is_Id = Get_Is_Id:gsub('#game',NumberGames) 
 local Get_Is_Id = Get_Is_Id:gsub('#photos',TotalPhoto) 
-return LuaTele.sendText(msg_chat_id,msg_id,'['..Get_Is_Id..']',"md",true) 
+local Get_Is_Id = Get_Is_Id:gsub('#Bio',Bio)
+local reply_markup = merolua.replyMarkup{
+type = 'inline',
+data = {
+{
+{text= UserInfo.first_name ,url = "tg://user?id="..UserInfo.id..""},
+},
+}
+}
+return merolua.sendText(msg_chat_id,msg_id,'['..Get_Is_Id..']',"md",false, false, false, false, reply_markup)
 else
-return LuaTele.sendText(msg_chat_id,msg_id,
-'\n*↯︙ايديك : '..UserId..
-'\n↯︙معرفك : '..UserInfousername..
-'\n↯‍︰رتبتك : '..RinkBot..
-'\n↯︙رسائلك : '..TotalMsg..
-'\n↯︙تعديلاتك : '..TotalEdit..
-'\n↯︙تفاعلك : '..TotalMsgT..
-'*',"md",true) 
+local reply_markup = merolua.replyMarkup{
+type = 'inline',
+data = {
+{
+{text= UserInfo.first_name ,url = "https://t.me/"..UserInfo.username..""},
+},
+}
+}
+return merolua.sendText(msg.chat_id, msg.id,
+'\n*↯︙ايديك : ❨'..UserId..
+'❩\n↯︙معرفك : ❨*['..UserInfousername..
+']*❩\n↯‍︙رتبتك : ❨'..RinkBot..
+'❩\n↯︙رسائلك : ❨'..TotalMsg..
+'❩\n↯︙سحكاتك : ❨'..TotalEdit..
+'❩\n↯︙تفاعلك : ❨'..TotalMsgT..
+'❩\n↯︙البايو : ❨*['..Bio..
+']', "md",false, false, false, false, reply_markup)
 end
 end
 end
-if text == 'ايدي' or text == 'كشف'  and msg.reply_to_message_id ~= 0 then
-local Message_Reply = LuaTele.getMessage(msg.chat_id, msg.reply_to_message_id)
-local UserInfo = LuaTele.getUser(Message_Reply.sender.user_id)
+if text == 'ايدي' and msg.reply_to_message_id ~= 0 then
+
+
+local Message_Reply = merolua.getMessage(msg.chat_id, msg.reply_to_message_id)
+local UserInfo = merolua.getUser(Message_Reply.sender_id.user_id)
 if UserInfo.username then
 UserInfousername = '@'..UserInfo.username..''
 else
 UserInfousername = 'لا يوجد'
+end
+local InfoUser = merolua.getUserFullInfo(Message_Reply.sender_id.user_id)
+if InfoUser.bio then
+Bio = FlterBio(InfoUser.bio)
+else
+Bio = 'لا يوجد'
 end
 local UserId = Message_Reply.sender.user_id
 local RinkBot = Controller(msg_chat_id,Message_Reply.sender.user_id)
